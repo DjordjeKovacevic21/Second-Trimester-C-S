@@ -1,4 +1,4 @@
-//Get all of the button elements.
+
 var zero = document.getElementById('zero');
 var one = document.getElementById('one');
 var two = document.getElementById('two');
@@ -17,29 +17,25 @@ var clear = document.getElementById('clear');
 var decimal = document.getElementById('decimal');
 var sign = document.getElementById('sign');
 
-//Get the display and runningTotal elements
+
 var display = document.getElementById('display');
 var runningTotal = document.getElementById('runningTotal');
 
-//value will hold the current value on the screen.
 var value = '';
 
-//total will hole the current total Value
+
 var total = 0;
 
-//These boolean variables will track which opperation
-//is being performed.
+
 var addB = false;
 var subtractB = false;
 var multiplyB = false;
 var divideB = false;
 
-//Checks to see if it is the first entry in a calculation
+
 var firstEntry = true;
 
-//These functions,
-//1. Concatenate value and the new digit.
-//2. Display value.
+
 function zeroFunction(){
   value += '0';
   display.innerHTML = value;
@@ -94,11 +90,7 @@ function decimalFunction(){
   value += '.';
   display.innerHTML = value;
 }
-//These functions,
-//1. Run evaluate() which checks operation, does calculation, and resets operation.
-//2. Updates operation to +, -. x, or /.
-//3. Updates and displays runningTotal and display.
-//4. Runs emptyZero() which makes value = '' display as a zero.
+
 
 function addFunction(){
   evaluate();
